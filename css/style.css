@@ -12,7 +12,7 @@
     --red:     #8B1A00;
     --text:    #E8D8A0;
     --muted:   #8A7040;
-    --fn-title: 'Cinzel Decorative', cursive;
+    --fn-title: 'Press Start 2P', cursive;
     --fn-head:  'Cinzel', serif;
     --fn-body:  'IM Fell English', serif;
 }
@@ -50,9 +50,9 @@ body {
 
 .nav-logo {
     font-family: var(--fn-title);
-    font-size: 1.3rem; color: var(--gold);
+    font-size: 0.9rem; color: var(--gold);
     text-shadow: 0 0 12px rgba(212,175,55,0.6), 0 0 30px rgba(212,175,55,0.2);
-    letter-spacing: 0.08em;
+    letter-spacing: 0.05em;
 }
 
 .nav-links a {
@@ -94,8 +94,8 @@ body {
 .mob-nav.open { opacity: 1; pointer-events: all; }
 .mob-nav a {
     font-family: var(--fn-title);
-    font-size: 2rem; color: var(--gold); text-decoration: none;
-    letter-spacing: 0.1em;
+    font-size: 1rem; color: var(--gold); text-decoration: none;
+    letter-spacing: 0.08em;
     text-shadow: 0 0 20px rgba(212,175,55,0.5);
     transition: color 0.2s;
 }
@@ -166,7 +166,7 @@ body {
 /* ── GOLD TITLE ── */
 .gold-title {
     font-family: var(--fn-title);
-    font-size: 7rem; font-weight: 900; line-height: 1;
+    font-size: 5rem; font-weight: 900; line-height: 1.2;
     background: linear-gradient(180deg,
         #fff8e0 0%,
         #FFD700 25%,
@@ -262,9 +262,10 @@ body {
 
 .section-title {
     font-family: var(--fn-title);
-    font-size: 2.5rem; color: var(--gold);
+    font-size: 1.4rem; color: var(--gold);
     text-shadow: 0 0 20px rgba(212,175,55,0.4);
-    margin-bottom: 1rem; letter-spacing: 0.05em;
+    margin-bottom: 1.5rem; letter-spacing: 0.05em;
+    line-height: 1.6;
 }
 .section-title.center { text-align: center; }
 
@@ -370,9 +371,10 @@ body {
 
 .service-card h3 {
     font-family: var(--fn-title);
-    font-size: 1.2rem; color: var(--gold);
+    font-size: 0.75rem; color: var(--gold);
     text-shadow: 0 0 12px rgba(212,175,55,0.4);
-    margin-bottom: 1rem; letter-spacing: 0.05em;
+    margin-bottom: 1.2rem; letter-spacing: 0.04em;
+    line-height: 1.8;
 }
 
 .card-divline {
@@ -416,9 +418,9 @@ body {
     padding: 2.5rem;
 }
 .panel-overlay h3 {
-    font-family: var(--fn-title); font-size: 1.5rem;
+    font-family: var(--fn-title); font-size: 0.85rem;
     color: var(--gold); text-shadow: 0 0 15px rgba(212,175,55,0.6);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem; line-height: 1.6;
 }
 .panel-overlay p { font-size: 0.9rem; color: var(--cream); font-style: italic; }
 
@@ -506,9 +508,9 @@ body {
 }
 .footer-logo {
     font-family: var(--fn-title);
-    font-size: 1.8rem; color: var(--gold);
+    font-size: 1.1rem; color: var(--gold);
     text-shadow: 0 0 20px rgba(212,175,55,0.5);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.8rem; letter-spacing: 0.05em;
 }
 .footer-ornament {
     color: var(--gold3); font-size: 1rem;
@@ -619,9 +621,9 @@ body {
     .gallery-grid { grid-template-columns: 1fr 1fr; gap: 8px; }
     .gallery-grid .gallery-item { grid-row: span 1 !important; grid-column: span 1 !important; height: 180px; }
 
-    .gold-title { font-size: 3.5rem; }
-    .section-title { font-size: 1.8rem; }
-    .quote-text { font-size: 1.4rem; }
+    .gold-title { font-size: 2.2rem; }
+    .section-title { font-size: 1rem; }
+    .quote-text { font-size: 1.2rem; }
 
     .nav { padding: 1.2rem 1.5rem; }
     .nav-links { display: none; }
@@ -640,7 +642,7 @@ body {
 }
 
 @media (max-width: 480px) {
-    .gold-title { font-size: 2.6rem; }
+    .gold-title { font-size: 1.6rem; }
     .hero-divline { width: 240px; }
     .stats-row { flex-direction: column; }
     .stat-divider { display: none; }
