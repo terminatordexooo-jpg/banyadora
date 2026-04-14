@@ -133,6 +133,40 @@ document.addEventListener('DOMContentLoaded', () => {
     onScroll();
 
 
+    // ── LIGHTBOX ─────────────────────────────────────────────
+    const lightbox = document.getElementById('lightbox');
+    const lbImg    = document.getElementById('lbImg');
+    const lbClose  = document.getElementById('lbClose');
+    const lbPrev   = document.getElementById('lbPrev');
+    const lbNext   = document.getElementById('lbNext');
+    const galleryItems = Array.from(document.querySelectorAll('.gallery-item img'));
+    let currentIdx = 0;
+
+    const openLb = (idx) => {
+        currentIdx = idx;
+        lbImg.src = galleryItems[idx].src;
+        lightbox.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    };
+    const closeLb = () => {
+        lightbox.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+    const showNext = () => openLb((currentIdx + 1) % galleryItems.length);
+    const showPrev = () => openLb((currentIdx - 1 + galleryItems.length) % galleryItems.length);
+
+    galleryItems.forEach((img, i) => img.parentElement.addEventListener('click', () => openLb(i)));
+    lbClose.addEventListener('click', closeLb);
+    lbNext.addEventListener('click', showNext);
+    lbPrev.addEventListener('click', showPrev);
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLb(); });
+    document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape')      closeLb();
+        if (e.key === 'ArrowRight')  showNext();
+        if (e.key === 'ArrowLeft')   showPrev();
+    });
+
     // ── GSAP ANIMATIONS ──────────────────────────────────────
     gsap.registerPlugin(ScrollTrigger);
 
