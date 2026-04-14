@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Sovereign | Luxury Writing Instrument</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+
+<body class="loading">
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-line"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="logo">SOVEREIGN</div>
+        <div class="nav-links">
+            <a href="#hero">The Instrument</a>
+            <a href="#engineering">Engineering</a>
+            <a href="#details">Craftsmanship</a>
+            <a href="#acquire" class="btn-nav">Acquire</a>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg">
+                <!-- Placeholder for Hero Shot: Deep obsidian background with subtle gradient falloff -->
+                <div class="obsidian-gradient"></div>
+            </div>
+            <div class="hero-content">
+                <h1 class="fade-up">The Sovereign</h1>
+                <p class="subtitle fade-up delay-1">Beyond a writing instrument. A legacy.</p>
+                <div class="scroll-indicator fade-up delay-2">
+                    <span>Explore</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Engineering Section (Exploded View Concept) -->
+        <section id="engineering" class="engineering-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="reveal-text">Engineering Art</h2>
+                    <p class="section-desc">Precision-machined brass threads. Weighted balance. Absolute perfection.</p>
+                </div>
+
+                <div class="exploded-view-container">
+                    <!-- Placeholder representation of exploded view components floating -->
+                    <div class="component c-cap" data-speed="0.5">
+                        <div class="comp-label">Polished Resin Cap</div>
+                    </div>
+                    <div class="component c-nib" data-speed="0.8">
+                        <div class="comp-label">18k Gold Nib</div>
+                    </div>
+                    <div class="component c-body" data-speed="0.6">
+                        <div class="comp-label">Weighted Barrel</div>
+                    </div>
+                    <div class="component c-feeder" data-speed="1.1">
+                        <div class="comp-label">Precision Feeder</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Section (Macro Photography Concept) -->
+        <section id="details" class="details-section">
+            <div class="detail-grid">
+                <div class="detail-item">
+                    <div class="detail-text">
+                        <h3>18k Gold Nib</h3>
+                        <p>Hand-crafted for the perfect ink flow. A smooth, controlled glide across the page.</p>
+                    </div>
+                    <div class="detail-visual gold-gradient"></div>
+                </div>
+                <div class="detail-item reverse">
+                    <div class="detail-text">
+                        <h3>Deep Obsidian Resin</h3>
+                        <p>Polished to a glass-like finish. Deep, mysterious, and warm to the touch.</p>
+                    </div>
+                    <div class="detail-visual obsidian-texture"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cinematic Quote -->
+        <section class="quote-section">
+            <div class="container">
+                <blockquote>"The pen is the tongue of the mind."</blockquote>
+                <cite>— Cervantes</cite>
+            </div>
+        </section>
+
+        <!-- Purchase / CTA -->
+        <section id="acquire" class="acquire-section">
+            <div class="container">
+                <div class="product-card">
+                    <div class="product-info">
+                        <h2>The Sovereign.</h2>
+                        <p class="specs">18k Gold | Obsidian Resin | Limited Edition</p>
+                        <ul class="features">
+                            <li><i data-lucide="check"></i> Lifetime Warranty</li>
+                            <li><i data-lucide="check"></i> Walnut Presentation Box</li>
+                            <li><i data-lucide="check"></i> Complimentary Ink Bottle</li>
+                        </ul>
+                        <div class="price">$1,250.00</div>
+                        <button class="btn-gold">Add to Collection</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo">SOVEREIGN</div>
+            <p class="copyright">&copy; 2026 Sovereign Pens. Designed for the exceptional.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
