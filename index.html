@@ -1,230 +1,193 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BanyaDora — Y2K Edition</title>
+    <title>BanyaDora — Розкішна Українська Баня</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&family=Cinzel:wght@400;600;700&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
-    <!-- Scanlines overlay -->
-    <div class="scanlines"></div>
 
-    <!-- Pixel particles canvas -->
-    <canvas id="particles" class="particles-canvas"></canvas>
+    <!-- Stars canvas -->
+    <canvas id="stars"></canvas>
 
-    <!-- Mobile Nav -->
-    <div class="mobile-nav" id="mobileNav">
-        <a href="#hero"       class="mobile-nav-link">// HOME</a>
-        <a href="#ritual"     class="mobile-nav-link">// RITUAL</a>
-        <a href="#services"   class="mobile-nav-link">// SERVICES</a>
-        <a href="#atmosphere" class="mobile-nav-link">// VIBE</a>
-        <a href="#reserve"    class="mobile-nav-link mobile-nav-cta">[ RESERVE ]</a>
+    <!-- Mobile nav -->
+    <div class="mob-nav" id="mobNav">
+        <a href="#hero">Головна</a>
+        <a href="#about">Про Баню</a>
+        <a href="#services">Послуги</a>
+        <a href="#reserve">Бронювання</a>
     </div>
 
-    <!-- Nav -->
+    <!-- Navigation -->
     <nav class="nav" id="nav">
-        <div class="logo">BANYA<span class="logo-accent">DORA</span></div>
+        <div class="nav-logo">BANYADORA</div>
         <div class="nav-links">
-            <a href="#hero">// HOME</a>
-            <a href="#ritual">// RITUAL</a>
-            <a href="#services">// SERVICES</a>
-            <a href="#atmosphere">// VIBE</a>
-            <a href="#reserve" class="btn-nav">[ RESERVE ]</a>
+            <a href="#hero">Головна</a>
+            <a href="#about">Про Баню</a>
+            <a href="#services">Послуги</a>
+            <a href="#reserve">Бронювання</a>
         </div>
-        <button class="hamburger" id="hamburger" aria-label="Menu">
+        <button class="burger" id="burger">
             <span></span><span></span><span></span>
         </button>
     </nav>
 
-    <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+        <div class="hero-photo" id="heroPhoto"></div>
+        <div class="hero-veil"></div>
+        <div class="sparks-wrap" id="sparks"></div>
 
-        <!-- ── HERO ── -->
-        <section id="hero" class="hero-section">
-            <div class="hero-bg-img" id="heroBgImg"></div>
-            <div class="hero-overlay"></div>
-            <div class="hero-grid"></div>
-
-            <div class="hero-content" id="heroContent">
-                <div class="hero-year glitch-text" data-text="Y2K EDITION">Y2K EDITION</div>
-                <h1 class="hero-title" id="heroTitle">
-                    <span class="chrome-text" data-text="BANYA">BANYA</span><span class="chrome-text magenta" data-text="DORA">DORA</span>
-                </h1>
-                <p class="hero-sub">// THE MILLENNIUM RITUAL //</p>
-                <div class="hero-divider"><span></span><span class="diamond">◆</span><span></span></div>
-                <p class="hero-tagline">Where fire meets the future.</p>
-                <a href="#reserve" class="btn-cyber">
-                    <span class="btn-cyber-text">BOOK SESSION</span>
-                    <span class="btn-cyber-glitch">BOOK SESSION</span>
-                </a>
-                <div class="scroll-indicator">
-                    <span class="scroll-text">SCROLL</span>
-                    <div class="scroll-line"></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── RITUAL ── -->
-        <section id="ritual" class="ritual-section">
-            <div class="container">
-                <div class="section-label">// 001</div>
-                <div class="ritual-grid">
-                    <div class="ritual-text">
-                        <h2 class="neon-heading">THE<br>RITUAL</h2>
-                        <p class="ritual-desc">For centuries, the Russian banya has been a sanctuary of renewal. Birch branches. Steam. Ice. The cycle never ends.</p>
-                        <div class="ritual-stats">
-                            <div class="stat">
-                                <span class="stat-number">100°</span>
-                                <span class="stat-label">CELSIUS</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">400+</span>
-                                <span class="stat-label">YEARS</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">∞</span>
-                                <span class="stat-label">RENEWAL</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ritual-visual" id="ritualVisual">
-                        <div class="holo-orb"></div>
-                        <div class="pixel-tag tag-1">[ BIRCH ]</div>
-                        <div class="pixel-tag tag-2">[ FIRE ]</div>
-                        <div class="pixel-tag tag-3">[ STEAM ]</div>
-                        <div class="pixel-tag tag-4">[ ICE ]</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── SERVICES ── -->
-        <section id="services" class="services-section">
-            <div class="container">
-                <div class="section-label">// 002</div>
-                <div class="section-header text-center">
-                    <h2 class="neon-heading center">THE CHAMBERS</h2>
-                    <p class="section-desc">// select your experience //</p>
-                </div>
-                <div class="services-grid">
-                    <div class="holo-card">
-                        <div class="holo-card-border"></div>
-                        <div class="holo-card-inner">
-                            <div class="card-num">01</div>
-                            <h3>KLASSIK<br>PARILKA</h3>
-                            <p>Cedar-lined walls. Dry heat. Authentic parilka with venik massage. 100°C of pure tradition.</p>
-                            <div class="card-temp-bar">
-                                <div class="temp-fill" style="--pct:95%"></div>
-                                <span>95–100°C</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="holo-card featured-card">
-                        <div class="holo-card-border"></div>
-                        <div class="holo-card-inner">
-                            <div class="card-num featured-num">02</div>
-                            <h3>STEAM<br>RITUAL</h3>
-                            <p>Eucalyptus steam. Volcanic stones. The breath of the earth — reimagined for the new millennium.</p>
-                            <div class="card-temp-bar">
-                                <div class="temp-fill" style="--pct:65%"></div>
-                                <span>50–70°C</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="holo-card">
-                        <div class="holo-card-border"></div>
-                        <div class="holo-card-inner">
-                            <div class="card-num">03</div>
-                            <h3>ICE<br>PLUNGE</h3>
-                            <p>Step from fire into ice. The ultimate contrast. Every nerve awake. The cycle complete.</p>
-                            <div class="card-temp-bar cold">
-                                <div class="temp-fill" style="--pct:8%"></div>
-                                <span>5–8°C</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── ATMOSPHERE ── -->
-        <section id="atmosphere" class="atmosphere-section">
-            <div class="detail-grid">
-                <div class="detail-item">
-                    <div class="detail-text">
-                        <div class="section-label">// 003</div>
-                        <h3 class="neon-heading-sm">CEDAR<br>&amp; SILENCE</h3>
-                        <p>Siberian cedar. Warm wood. The scent of the ritual. The heat is alive.</p>
-                    </div>
-                    <div class="detail-visual cedar-visual">
-                        <div class="visual-scanlines"></div>
-                    </div>
-                </div>
-                <div class="detail-item reverse">
-                    <div class="detail-text">
-                        <div class="section-label">// 004</div>
-                        <h3 class="neon-heading-sm">THE<br>LIVING FLAME</h3>
-                        <p>Hand-split birch. Volcanic stones. The fire is never rushed. The heat is earned.</p>
-                    </div>
-                    <div class="detail-visual fire-visual">
-                        <div class="visual-scanlines"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── QUOTE ── -->
-        <section class="quote-section">
-            <div class="container">
-                <div class="quote-wrapper">
-                    <div class="quote-corner tl"></div>
-                    <div class="quote-corner tr"></div>
-                    <div class="quote-corner bl"></div>
-                    <div class="quote-corner br"></div>
-                    <blockquote>«В бане помылся —<br>как заново родился.»</blockquote>
-                    <cite>— RUSSIAN PROVERB // EST. 16TH CENTURY</cite>
-                </div>
-            </div>
-        </section>
-
-        <!-- ── RESERVE ── -->
-        <section id="reserve" class="reserve-section">
-            <div class="container">
-                <div class="section-label">// 005</div>
-                <div class="reserve-card">
-                    <div class="reserve-card-border"></div>
-                    <div class="reserve-card-inner">
-                        <div class="reserve-badge">[ LIMITED ACCESS ]</div>
-                        <h2 class="neon-heading center">RESERVE<br>YOUR EVENING</h2>
-                        <p class="specs">PRIVATE SESSION · 3 HOURS · UP TO 6 GUESTS</p>
-                        <ul class="features">
-                            <li><span class="feat-icon">▸</span> Full parilka access</li>
-                            <li><span class="feat-icon">▸</span> Venik massage included</li>
-                            <li><span class="feat-icon">▸</span> Ice plunge &amp; rest area</li>
-                            <li><span class="feat-icon">▸</span> Herbal tea ceremony</li>
-                        </ul>
-                        <div class="price">$180<span class="price-from">from</span></div>
-                        <button class="btn-cyber large">
-                            <span class="btn-cyber-text">RESERVE NOW</span>
-                            <span class="btn-cyber-glitch">RESERVE NOW</span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-logo">BANYA<span class="logo-accent">DORA</span></div>
-            <p class="footer-copy">© 2000–2026 BANYADORA SYSTEMS. ALL RIGHTS RESERVED.</p>
-            <p class="footer-sub">// THE ANCIENT RITUAL, MILLENNIUM EDITION //</p>
+        <div class="hero-box">
+            <div class="hero-ornament">✦ ✦ ✦</div>
+            <h1 class="gold-title">BanyaDora</h1>
+            <div class="hero-divline"><span></span><span class="dia">❖</span><span></span></div>
+            <p class="hero-sub">Розкішна Українська Баня</p>
+            <p class="hero-tagline">«Де стародавній вогонь зустрічає нове тисячоліття»</p>
+            <a href="#reserve" class="gold-btn">Забронювати Сеанс</a>
+            <div class="hero-ornament bottom">✦ ✦ ✦</div>
         </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="about-section">
+        <div class="section-ornament">❧ ❧ ❧</div>
+        <div class="wrap">
+            <div class="about-grid">
+                <div class="about-text">
+                    <h2 class="section-title">Стародавній Ритуал</h2>
+                    <div class="gold-line"></div>
+                    <p>Упродовж століть українська баня була серцем народного життя — місцем тепла, зцілення та єднання. У BanyaDora ми несемо цю вічну традицію у нове тисячоліття.</p>
+                    <p>Березовий пар. Стіни з кедра. Шипіння води на розпечених каменях. Це не спа. Це — ритуал.</p>
+                    <div class="stats-row">
+                        <div class="stat-box">
+                            <span class="stat-big">100°</span>
+                            <span class="stat-name">Цельсій</span>
+                        </div>
+                        <div class="stat-divider">✦</div>
+                        <div class="stat-box">
+                            <span class="stat-big">400+</span>
+                            <span class="stat-name">Років Традиції</span>
+                        </div>
+                        <div class="stat-divider">✦</div>
+                        <div class="stat-box">
+                            <span class="stat-big">∞</span>
+                            <span class="stat-name">Відновлення</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-img">
+                    <div class="img-frame">
+                        <div class="img-inner banya-photo"></div>
+                        <div class="frame-corner c1"></div>
+                        <div class="frame-corner c2"></div>
+                        <div class="frame-corner c3"></div>
+                        <div class="frame-corner c4"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-ornament">❧ ❧ ❧</div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="services-section">
+        <div class="wrap">
+            <h2 class="section-title center">Наші Зали</h2>
+            <div class="gold-line center"></div>
+            <p class="section-sub">Оберіть свій досвід. Кожен зал розповідає свою історію.</p>
+
+            <div class="cards-grid">
+                <div class="service-card">
+                    <div class="card-glow-border"></div>
+                    <div class="card-top-icon">🔥</div>
+                    <h3>Класична Парилка</h3>
+                    <div class="card-divline"></div>
+                    <p>Стіни з кедра. Суха спека до 100°C. Справжнє серце бані — з традиційним масажем віником.</p>
+                    <div class="card-temp">95 – 100°C</div>
+                </div>
+                <div class="service-card gold-card">
+                    <div class="card-glow-border"></div>
+                    <div class="card-top-icon">💨</div>
+                    <h3>Парова Церемонія</h3>
+                    <div class="card-divline"></div>
+                    <p>Евкаліптовий пар. Мінеральна вода на вулканічних каменях. Дихання землі, переосмислене.</p>
+                    <div class="card-temp">50 – 70°C</div>
+                </div>
+                <div class="service-card">
+                    <div class="card-glow-border"></div>
+                    <div class="card-top-icon">❄️</div>
+                    <h3>Крижане Занурення</h3>
+                    <div class="card-divline"></div>
+                    <p>Від вогню до льоду. Прокинься кожним нервом. Завершіть стародавній цикл тепла і холоду.</p>
+                    <div class="card-temp">5 – 8°C</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ATMOSPHERE PANELS -->
+    <section class="panels-section">
+        <div class="panel">
+            <div class="panel-img cedar-img"></div>
+            <div class="panel-overlay">
+                <h3>Кедр і Тиша</h3>
+                <p>Сибірський кедр. Стародавнє тепло. Аромат, який не забудеш.</p>
+            </div>
+        </div>
+        <div class="panel">
+            <div class="panel-img fire-img"></div>
+            <div class="panel-overlay">
+                <h3>Живий Вогонь</h3>
+                <p>Берозові дрова. Вулканічні камені. Вогонь ніколи не поспішає.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUOTE -->
+    <section class="quote-section">
+        <div class="wrap">
+            <div class="quote-frame">
+                <div class="qf-corner qfc1">✦</div>
+                <div class="qf-corner qfc2">✦</div>
+                <div class="qf-corner qfc3">✦</div>
+                <div class="qf-corner qfc4">✦</div>
+                <p class="quote-text">«У бані помився — наче заново народився.»</p>
+                <p class="quote-cite">— Українське народне прислів'я</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVE -->
+    <section id="reserve" class="reserve-section">
+        <div class="wrap">
+            <h2 class="section-title center">Забронюйте Вечір</h2>
+            <div class="gold-line center"></div>
+            <div class="reserve-box">
+                <div class="rb-ornament">❦</div>
+                <p class="reserve-desc">Приватний сеанс · 3 години · До 6 гостей</p>
+                <ul class="reserve-list">
+                    <li>✦ Повний доступ до парилки</li>
+                    <li>✦ Масаж віником включено</li>
+                    <li>✦ Крижане занурення та зона відпочинку</li>
+                    <li>✦ Церемонія трав'яного чаю</li>
+                </ul>
+                <div class="reserve-price">Від <span>$180</span></div>
+                <a href="#" class="gold-btn large">Забронювати</a>
+                <div class="rb-ornament">❦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-logo">BanyaDora</div>
+        <div class="footer-ornament">✦ ✦ ✦</div>
+        <p class="footer-copy">© 2000 – 2026 BanyaDora. Стародавній Ритуал, Досконалий.</p>
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
