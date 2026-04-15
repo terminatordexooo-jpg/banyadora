@@ -128,7 +128,13 @@ body {
 
 .hero-veil {
     position: absolute; inset: 0; z-index: 1;
-    background: rgba(0,0,0,0.96);
+    background:
+        linear-gradient(to bottom,
+            rgba(10,5,0,0.6) 0%,
+            rgba(10,5,0,0.2) 35%,
+            rgba(10,5,0,0.5) 70%,
+            rgba(10,5,0,0.95) 100%),
+        radial-gradient(ellipse at center, rgba(139,26,0,0.12) 0%, transparent 70%);
 }
 
 .sparks-wrap {
@@ -171,26 +177,8 @@ body {
 .nav-logo img { height: 44px; width: 44px; display: block; }
 .footer-logo img { height: 80px; width: 80px; display: block; margin: 0 auto; }
 .gold-title {
-    font-family: var(--fn-logo);
-    font-size: 8rem; font-weight: 400; line-height: 1; letter-spacing: 0.05em;
-    background: linear-gradient(180deg,
-        #fff8e0 0%,
-        #FFD700 25%,
-        #D4AF37 50%,
-        #FFD700 70%,
-        #fff8e0 100%
-    );
-    background-size: 100% 200%;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: goldShine 4s ease-in-out infinite;
-    filter: drop-shadow(0 0 30px rgba(212,175,55,0.7)) drop-shadow(0 4px 8px rgba(0,0,0,0.8));
     margin-bottom: 1.5rem;
-}
-@keyframes goldShine {
-    0%,100% { background-position: 0% 0%; filter: drop-shadow(0 0 20px rgba(212,175,55,0.5)) drop-shadow(0 4px 8px rgba(0,0,0,0.8)); }
-    50%      { background-position: 0% 100%; filter: drop-shadow(0 0 40px rgba(255,215,0,0.9)) drop-shadow(0 4px 8px rgba(0,0,0,0.8)); }
+    line-height: 1;
 }
 
 .hero-divline {
