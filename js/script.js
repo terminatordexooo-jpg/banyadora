@@ -153,11 +153,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const lbPrev   = document.getElementById('lbPrev');
     const lbNext   = document.getElementById('lbNext');
     const galleryItems = Array.from(document.querySelectorAll('.gallery-item img'));
+    const lbCounter = document.getElementById('lbCounter');
     let currentIdx = 0;
 
     const openLb = (idx) => {
         currentIdx = idx;
         lbImg.src = galleryItems[idx].src;
+        if (lbCounter) lbCounter.textContent = `${idx + 1} / ${galleryItems.length}`;
+        if (lbCounter) lbCounter.style.display = '';
         lightbox.classList.add('open');
         document.body.style.overflow = 'hidden';
     };
@@ -189,16 +192,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 lbImg.src = img.src;
                 lbPrev.style.display = 'none';
                 lbNext.style.display = 'none';
+                if (lbCounter) lbCounter.style.display = 'none';
                 lightbox.classList.add('open');
                 document.body.style.overflow = 'hidden';
             });
         });
-
-        // restore arrows when gallery opens
         galleryItems.forEach((img, i) => {
             img.parentElement.addEventListener('click', () => {
                 lbPrev.style.display = '';
                 lbNext.style.display = '';
+                if (lbCounter) lbCounter.style.display = '';
             });
         });
     }
