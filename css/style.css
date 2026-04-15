@@ -498,6 +498,21 @@ body {
     font-size: 2.5rem; color: var(--gold2);
     text-shadow: 0 0 20px rgba(255,215,0,0.4);
 }
+.reserve-extra {
+    font-family: var(--fn-body);
+    font-size: 0.88rem; color: var(--muted);
+    margin-top: -1.4rem; margin-bottom: 1.2rem;
+}
+.reserve-deposit {
+    font-family: var(--fn-body);
+    font-size: 0.9rem; color: var(--cream);
+    background: rgba(212,175,55,0.08);
+    border: 1px solid rgba(212,175,55,0.25);
+    padding: 0.8rem 1.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: 0.03em;
+}
+.reserve-deposit strong { color: var(--gold); }
 
 /* ── FOOTER ── */
 .footer {
@@ -586,6 +601,37 @@ body {
     margin: 0 auto;
     line-height: 1.9;
     font-style: italic;
+}
+
+.inc-item--note em {
+    font-size: 0.78rem;
+    color: var(--muted);
+    font-style: italic;
+    display: block;
+}
+
+/* INFO CARDS */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1rem;
+    margin-top: 3rem;
+}
+.info-card {
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(212,175,55,0.2);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+.info-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+.info-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 /* ── GALLERY ── */
@@ -735,6 +781,8 @@ body {
     .inc-item { font-size: 0.82rem; padding: 0.8rem 1rem; }
     .hygiene-block { padding: 1.8rem 1.2rem; }
     .hyg-text { font-size: 0.88rem; }
+    .info-cards { grid-template-columns: 1fr 1fr; }
+    .reserve-deposit { font-size: 0.82rem; padding: 0.7rem 1rem; }
 
     /* Gallery — single column on mobile */
     .gallery-section { padding: 4rem 0; }
