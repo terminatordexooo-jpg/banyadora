@@ -569,6 +569,86 @@ body {
     background-position: center !important;
 }
 
+/* ── DESCRIPTION ── */
+.about-section {
+    padding: 6rem 0;
+    background: var(--bg);
+    position: relative; z-index: 1;
+}
+.desc-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+.desc-card {
+    background: rgba(212,175,55,0.04);
+    border: 1px solid rgba(212,175,55,0.2);
+    padding: 2rem 1.8rem;
+    transition: border-color 0.3s, transform 0.3s;
+}
+.desc-card:hover {
+    border-color: rgba(212,175,55,0.5);
+    transform: translateY(-3px);
+}
+.desc-icon {
+    color: var(--gold);
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
+    font-weight: 700;
+}
+.desc-h {
+    font-family: var(--fn-head);
+    font-size: 1.2rem;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+.desc-p {
+    font-family: var(--fn-body);
+    font-size: 0.98rem;
+    color: var(--text);
+    line-height: 1.75;
+}
+.desc-p strong { color: var(--gold2); font-weight: 600; }
+.desc-list {
+    list-style: none;
+    font-family: var(--fn-body);
+    color: var(--text);
+}
+.desc-list li {
+    padding: 0.35rem 0 0.35rem 1.2rem;
+    border-bottom: 1px dashed rgba(212,175,55,0.1);
+    font-size: 0.94rem;
+    position: relative;
+}
+.desc-list li::before {
+    content: '✦';
+    color: var(--gold);
+    position: absolute;
+    left: 0;
+    font-size: 0.7rem;
+    top: 0.55rem;
+}
+.desc-list li:last-child { border-bottom: none; }
+.desc-list em { color: var(--muted); font-size: 0.85rem; }
+.desc-price-big {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--gold2);
+    letter-spacing: 0.03em;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 0 15px rgba(255,215,0,0.3);
+}
+.desc-price-big span {
+    font-size: 1rem;
+    color: var(--cream);
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
 /* ── INCLUDES ── */
 .includes-section {
     padding: 6rem 0;
@@ -804,6 +884,15 @@ body {
     .panels-section { grid-template-columns: 1fr; height: auto; }
     .panel          { height: 260px; }
     .panel-overlay h3 { font-size: 0.65rem; }
+
+    /* Description */
+    .about-section { padding: 4rem 0; }
+    .desc-grid { grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem; }
+    .desc-card { padding: 1.5rem 1.2rem; }
+    .desc-h { font-size: 1rem; }
+    .desc-p { font-size: 0.9rem; }
+    .desc-list li { font-size: 0.88rem; }
+    .desc-price-big { font-size: 1.8rem; }
 
     /* Includes */
     .includes-section { padding: 4rem 0; }
