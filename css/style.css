@@ -128,20 +128,13 @@ body {
 
 .hero-veil {
     position: absolute; inset: 0; z-index: 1;
-    background: rgba(0,0,0,0.82);
+    background: rgba(0,0,0,0.96);
 }
 
 .sparks-wrap {
     position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden;
 }
-.spark {
-    position: absolute;
-    width: 3px; height: 3px; border-radius: 50%;
-    background: var(--gold);
-    box-shadow: 0 0 6px var(--gold), 0 0 12px rgba(212,175,55,0.4);
-    animation: sparkRise var(--sd, 6s) ease-out infinite var(--dl, 0s);
-    left: var(--lx, 50%); bottom: -10px;
-}
+.spark { display: none; }
 @keyframes sparkRise {
     0%   { transform: translateY(0) scale(1); opacity: 0; }
     10%  { opacity: 1; }
