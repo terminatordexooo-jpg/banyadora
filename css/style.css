@@ -172,11 +172,8 @@ body {
     display: block;
 }
 .gold-title {
-    background: rgba(0,0,0,0.78);
-    padding: 1.5rem 2rem;
-    display: inline-block;
     margin: 0 auto 1.5rem;
-    backdrop-filter: blur(2px);
+    line-height: 1;
 }
 .nav-logo img { height: 44px; width: 44px; display: block; }
 .footer-logo img { height: 80px; width: 80px; display: block; margin: 0 auto; }
