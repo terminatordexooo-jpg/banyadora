@@ -167,6 +167,29 @@ document.addEventListener('DOMContentLoaded', () => {
         if (e.key === 'ArrowLeft')   showPrev();
     });
 
+    // ── INFO CARDS LIGHTBOX ──────────────────────────────────
+    const infoCards = Array.from(document.querySelectorAll('.info-card img'));
+    if (infoCards.length && lightbox && lbImg) {
+        infoCards.forEach(img => {
+            img.parentElement.style.cursor = 'pointer';
+            img.parentElement.addEventListener('click', () => {
+                lbImg.src = img.src;
+                lbPrev.style.display = 'none';
+                lbNext.style.display = 'none';
+                lightbox.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // restore arrows when gallery opens
+        galleryItems.forEach((img, i) => {
+            img.parentElement.addEventListener('click', () => {
+                lbPrev.style.display = '';
+                lbNext.style.display = '';
+            });
+        });
+    }
+
     // ── GSAP ANIMATIONS ──────────────────────────────────────
     gsap.registerPlugin(ScrollTrigger);
 
@@ -191,6 +214,7 @@ document.addEventListener('DOMContentLoaded', () => {
         { el: '.panel-overlay',  y: 30 },
         { el: '.quote-frame',    y: 40 },
         { el: '.reserve-box',    y: 40 },
+        { el: '.inc-item',       y: 30, stagger: 0.07 },
     ];
 
     reveals.forEach(({ el, y = 0, x = 0, stagger = 0 }) => {
@@ -219,5 +243,23 @@ document.addEventListener('DOMContentLoaded', () => {
             y: 40, opacity: 0, duration: 1.2, delay: i * 0.2, ease: 'power2.out'
         });
     });
+
+    // Info cards stagger animation
+    const infoCardEls = gsap.utils.toArray('.info-card');
+    if (infoCardEls.length) {
+        gsap.from(infoCardEls, {
+            scrollTrigger: {
+                trigger: '.info-cards',
+                start: 'top 85%',
+                toggleActions: 'play none none reverse'
+            },
+            y: 60,
+            opacity: 0,
+            scale: 0.92,
+            duration: 0.8,
+            stagger: 0.12,
+            ease: 'power3.out'
+        });
+    }
 
 });
