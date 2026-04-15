@@ -668,7 +668,7 @@ body {
 
 /* ── DESCRIPTION ── */
 .about-section {
-    padding: 7rem 0;
+    padding: 4rem 0 6rem;
     background: linear-gradient(180deg, #07030a 0%, #0f0600 50%, #07030a 100%);
     position: relative; z-index: 1;
 }
