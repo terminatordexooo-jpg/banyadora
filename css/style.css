@@ -176,14 +176,15 @@ body {
 /* ── GOLD TITLE ── */
 .gold-title img {
     max-width: 100%;
-    width: 320px;
+    width: 280px;
     height: auto;
     display: block;
     margin: 0 auto;
-    filter: drop-shadow(0 0 30px rgba(212,175,55,0.5));
+    border-radius: 50%;
+    filter: drop-shadow(0 0 40px rgba(212,175,55,0.6));
 }
-.nav-logo img { height: 44px; width: auto; display: block; }
-.footer-logo img { height: 68px; width: auto; display: block; margin: 0 auto; }
+.nav-logo img { height: 48px; width: 48px; display: block; border-radius: 50%; }
+.footer-logo img { height: 90px; width: 90px; display: block; margin: 0 auto; border-radius: 50%; }
 .gold-title {
     font-family: var(--fn-logo);
     font-size: 8rem; font-weight: 400; line-height: 1; letter-spacing: 0.05em;
@@ -779,9 +780,9 @@ body {
 
     /* Hero */
     .gold-title     { font-size: 4rem; line-height: 1; }
-    .gold-title img { width: 200px; }
-    .nav-logo img   { height: 32px; }
-    .footer-logo img{ height: 50px; }
+    .gold-title img { width: 180px; }
+    .nav-logo img   { height: 38px; width: 38px; }
+    .footer-logo img{ height: 70px; width: 70px; }
     .hero-ornament  { font-size: 0.8rem; letter-spacing: 0.4rem; }
     .hero-divline   { width: 200px; }
     .hero-sub       { font-size: 0.65rem; letter-spacing: 0.15em; }
