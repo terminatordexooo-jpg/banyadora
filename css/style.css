@@ -2,7 +2,16 @@
    BANYADORA — Y2K Luxury Sauna — Real 2000s Vibe
    ===================================================== */
 
+@font-face {
+    font-family: 'Rhombic';
+    src: url('../fonts/rhombic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
+    --fn-logo: 'Rhombic', 'Press Start 2P', cursive;
     --bg:      #0a0500;
     --bg2:     #120800;
     --gold:    #D4AF37;
@@ -49,8 +58,9 @@ body {
 }
 
 .nav-logo {
-    font-family: var(--fn-title);
-    font-size: 0.9rem; color: var(--gold);
+    font-family: var(--fn-logo);
+    font-size: 2rem; color: var(--gold);
+    letter-spacing: 0.05em;
     text-shadow: 0 0 12px rgba(212,175,55,0.6), 0 0 30px rgba(212,175,55,0.2);
     letter-spacing: 0.05em;
 }
@@ -522,8 +532,9 @@ body {
     position: relative; z-index: 1;
 }
 .footer-logo {
-    font-family: var(--fn-title);
-    font-size: 1.1rem; color: var(--gold);
+    font-family: var(--fn-logo);
+    font-size: 2.5rem; color: var(--gold);
+    letter-spacing: 0.05em;
     text-shadow: 0 0 20px rgba(212,175,55,0.5);
     margin-bottom: 0.8rem; letter-spacing: 0.05em;
 }
@@ -739,7 +750,7 @@ body {
 
     /* Nav */
     .nav        { padding: 1rem 1.2rem; }
-    .nav-logo   { font-size: 0.7rem; }
+    .nav-logo   { font-size: 1.5rem; }
     .nav-links  { display: none; }
     .burger     { display: flex; }
 
@@ -810,7 +821,7 @@ body {
 
     /* Footer */
     .footer         { padding: 2.5rem 1rem; }
-    .footer-logo    { font-size: 0.8rem; }
+    .footer-logo    { font-size: 1.8rem; }
     .footer-ornament{ letter-spacing: 0.4rem; font-size: 0.8rem; }
     .footer-copy    { font-size: 0.6rem; letter-spacing: 0.05em; }
 
