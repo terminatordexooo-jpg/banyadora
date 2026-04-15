@@ -128,8 +128,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── NAV SCROLL ───────────────────────────────────────────
     const nav     = document.getElementById('nav');
-    const onScroll = () => nav && nav.classList.toggle('scrolled', window.scrollY > 60);
+    const stickyBook = document.querySelector('.sticky-book');
+    const reserveEl = document.getElementById('reserve');
+    const onScroll = () => {
+        if (nav) nav.classList.toggle('scrolled', window.scrollY > 60);
+        if (stickyBook && reserveEl) {
+            const rect = reserveEl.getBoundingClientRect();
+            const inReserve = rect.top < window.innerHeight && rect.bottom > 0;
+            const afterHero = window.scrollY > window.innerHeight * 0.4;
+            stickyBook.style.opacity = (afterHero && !inReserve) ? '1' : '0';
+            stickyBook.style.pointerEvents = (afterHero && !inReserve) ? 'auto' : 'none';
+            stickyBook.style.transform = (afterHero && !inReserve) ? 'translateY(0)' : 'translateY(100%)';
+        }
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
+    if (stickyBook) stickyBook.style.transition = 'opacity 0.3s, transform 0.3s';
     onScroll();
 
 
@@ -215,6 +228,8 @@ document.addEventListener('DOMContentLoaded', () => {
         { el: '.quote-frame',    y: 40 },
         { el: '.reserve-box',    y: 40 },
         { el: '.inc-item',       y: 30, stagger: 0.07 },
+        { el: '.desc-card',      y: 50, stagger: 0.15 },
+        { el: '.contact-card',   y: 40, stagger: 0.12 },
     ];
 
     reveals.forEach(({ el, y = 0, x = 0, stagger = 0 }) => {
