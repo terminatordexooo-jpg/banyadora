@@ -176,7 +176,7 @@ body {
 /* ── GOLD TITLE ── */
 .gold-title img {
     max-width: 100%;
-    width: 480px;
+    width: 320px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -779,7 +779,7 @@ body {
 
     /* Hero */
     .gold-title     { font-size: 4rem; line-height: 1; }
-    .gold-title img { width: 280px; }
+    .gold-title img { width: 200px; }
     .nav-logo img   { height: 32px; }
     .footer-logo img{ height: 50px; }
     .hero-ornament  { font-size: 0.8rem; letter-spacing: 0.4rem; }
