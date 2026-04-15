@@ -176,15 +176,14 @@ body {
 /* ── GOLD TITLE ── */
 .gold-title img {
     max-width: 100%;
-    width: 280px;
+    width: 240px;
     height: auto;
     display: block;
     margin: 0 auto;
-    border-radius: 50%;
-    filter: drop-shadow(0 0 40px rgba(212,175,55,0.6));
+    filter: drop-shadow(0 0 30px rgba(212,175,55,0.5));
 }
-.nav-logo img { height: 48px; width: 48px; display: block; border-radius: 50%; }
-.footer-logo img { height: 90px; width: 90px; display: block; margin: 0 auto; border-radius: 50%; }
+.nav-logo img { height: 44px; width: 44px; display: block; }
+.footer-logo img { height: 80px; width: 80px; display: block; margin: 0 auto; }
 .gold-title {
     font-family: var(--fn-logo);
     font-size: 8rem; font-weight: 400; line-height: 1; letter-spacing: 0.05em;
