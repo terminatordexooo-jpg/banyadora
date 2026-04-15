@@ -230,7 +230,6 @@ document.addEventListener('DOMContentLoaded', () => {
         { el: '.panel-overlay',  y: 30 },
         { el: '.quote-frame',    y: 40 },
         { el: '.reserve-box',    y: 40 },
-        { el: '.contact-card',   y: 40, stagger: 0.12 },
     ];
 
     reveals.forEach(({ el, y = 0, x = 0, stagger = 0 }) => {
