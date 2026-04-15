@@ -499,14 +499,27 @@ body {
 }
 .reserve-list li::first-letter { color: var(--gold); }
 .reserve-price {
-    font-family: var(--fn-body);
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem; color: var(--muted);
     margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
 }
 .reserve-price span {
-    font-family: var(--fn-title);
-    font-size: 2.5rem; color: var(--gold2);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 3rem; color: var(--gold2);
+    font-weight: 700;
+    letter-spacing: 0.05em;
     text-shadow: 0 0 20px rgba(255,215,0,0.4);
+}
+.reserve-price small {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.95rem;
+    color: var(--cream);
+    letter-spacing: 0.05em;
 }
 .reserve-extra {
     font-family: var(--fn-body);
