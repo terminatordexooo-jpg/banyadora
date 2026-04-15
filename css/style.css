@@ -527,6 +527,67 @@ body {
     background-position: center !important;
 }
 
+/* ── INCLUDES ── */
+.includes-section {
+    padding: 6rem 0;
+    background: var(--bg);
+    position: relative; z-index: 1;
+}
+.includes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1.2rem;
+    margin: 3rem 0;
+}
+.inc-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(212,175,55,0.05);
+    border: 1px solid rgba(212,175,55,0.2);
+    padding: 1rem 1.4rem;
+    font-family: var(--fn-body);
+    font-size: 0.95rem;
+    color: var(--cream);
+    transition: border-color 0.3s, background 0.3s;
+}
+.inc-item:hover {
+    border-color: rgba(212,175,55,0.5);
+    background: rgba(212,175,55,0.1);
+}
+.inc-icon { font-size: 1.4rem; flex-shrink: 0; }
+
+.hygiene-block {
+    margin-top: 4rem;
+    border: 1px solid rgba(212,175,55,0.25);
+    padding: 2.5rem 3rem;
+    text-align: center;
+    background: rgba(212,175,55,0.04);
+}
+.hyg-icon {
+    color: var(--gold);
+    font-size: 1.2rem;
+    letter-spacing: 0.5em;
+    margin-bottom: 1rem;
+}
+.hyg-title {
+    font-family: var(--fn-head);
+    font-size: 1.1rem;
+    color: var(--gold);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 1.2rem;
+}
+.hyg-text {
+    font-family: var(--fn-body);
+    font-size: 1rem;
+    color: var(--text);
+    max-width: 680px;
+    margin: 0 auto;
+    line-height: 1.9;
+    font-style: italic;
+}
+
 /* ── GALLERY ── */
 .gallery-section {
     padding: 6rem 0;
@@ -667,6 +728,13 @@ body {
     .panels-section { grid-template-columns: 1fr; height: auto; }
     .panel          { height: 260px; }
     .panel-overlay h3 { font-size: 0.65rem; }
+
+    /* Includes */
+    .includes-section { padding: 4rem 0; }
+    .includes-grid { grid-template-columns: 1fr 1fr; gap: 0.8rem; margin: 2rem 0; }
+    .inc-item { font-size: 0.82rem; padding: 0.8rem 1rem; }
+    .hygiene-block { padding: 1.8rem 1.2rem; }
+    .hyg-text { font-size: 0.88rem; }
 
     /* Gallery — single column on mobile */
     .gallery-section { padding: 4rem 0; }
